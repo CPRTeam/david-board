@@ -1,0 +1,10 @@
+---
+layout: default_iframe
+---
+
+{% for gate in site.data.gateways %}
+    {% if gate.url == page.url %}
+        <div class="gate-path">&gt; {{ gate.fullURI }}</div>
+        <iframe src="{{ gate.fullURI }}" frameborder="0" class="content-iframe"></iframe>
+    {% endif %}
+{% endfor %}
