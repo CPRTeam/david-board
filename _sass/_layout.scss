@@ -27,11 +27,17 @@ div.menu {
             font-size: 16px;
             color: #f60;
         }
-        a:hover:before {
+        a:hover:before, a.active:hover:before {
             content: '>';
             padding-right: 1px;
             font-size: 12px;
             color: #06f;
+        }
+        a.active:before {
+            content: '#';
+            padding-right: 2px;
+            font-size: 14px;
+            color: #60f;
         }
     }
 }

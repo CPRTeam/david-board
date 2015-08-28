@@ -29,7 +29,12 @@
 <div class="menu">
   <ul>
     {% for gate in site.data.gateways %}
-    <li><a href="{{ gate.url | prepend: site.baseurl }}">{{ gate.title }}</a></li>
+    {% if gate.url == page.url %}
+    {% assign isActive = "active" %}
+    {% else %}
+    {% assign isActive = "" %}
+    {% endif %}
+    <li><a class="{{isActive}}" href="{{ gate.url | prepend: site.baseurl }}">{{ gate.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
