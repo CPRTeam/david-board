@@ -12,6 +12,10 @@ github_username:  CPRTeam
 timezone: Asia/Taipei
 exclude: [ "CNAME", "david-board.sublime-project" ]
 
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
 # Build settings
 markdown: kramdown
 
